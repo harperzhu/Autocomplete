@@ -26,35 +26,31 @@ public class TernarySearchTreeAutocomplete implements Autocomplete {
         // TODO: Replace with your code
         throw new UnsupportedOperationException("Not implemented yet");
         for (CharSequence key : terms) {
-            overallRoot = put(overallRoot, key);    
+            overallRoot = put(overallRoot, key, 0);
         }
-        
     }
     
-    private Node get(Node x, CharSequence key) {
+    private Node get(Node x, CharSequence key, int d) {
         if (x == null) return null;
-        for (int i = 0; i < key.length(); i++) {
-            char data = key.charAt(i);
-            if      (data < x.data) return get(x.left,  key);
-            else if (data > x.data) return get(x.right, key);
-            else                    return get(x.mid,   key);
-        }
+        char data = key.charAt(d);
+        if      (data < x.data)        return get(x.left,  key, d);
+        else if (data > x.data)        return get(x.right, key, d);
+        else if (d < key.length() - 1) return get(x.mid,   key, d + 1);
+        else                           return x;
     }
     
-    private Node put(Node x, CharSequence key) {
-        char data = key.charAt(0);       
+    private Node put(Node x, CharSequence key, int d) {
+        char data = key.charAt(d);       
         if (x == null) {
-            x = new Node(key.charAt(0), true);
+            x = new Node(key.charAt(d), true);
             x.data = data;
         }
-        
-        for (int i = 1; i < key.length(); i++) {
-            data = key.charAt(i);
-            if      (data < x.data)  x.left  = put(x.left,  key);
-            else if (data > x.data)  x.right = put(x.right, key);
-            else                     x.mid   = put(x.mid,   key);
-            return x;
-        }
+
+        data = key.charAt(d);
+        if      (data < x.data)        x.left  = put(x.left,  key, d);
+        else if (data > x.data)        x.right = put(x.right, key, d);
+        else                           x.mid   = put(x.mid,   key, d + 1);
+        return x;
     }
     
     private void collect(Node x, StringBuilder prefix, List<CharSequence> list) {
@@ -78,7 +74,7 @@ public class TernarySearchTreeAutocomplete implements Autocomplete {
         
         // This line of code has an error
         List<CharSequence> newList = new ArrayList<>();
-        Node x = get(overallRoot, prefix);
+        Node x = get(overallRoot, prefix, 0);
         if (x == null) return newList;
         collect(x.mid, new StringBuilder(prefix), newList);
         return newList;
