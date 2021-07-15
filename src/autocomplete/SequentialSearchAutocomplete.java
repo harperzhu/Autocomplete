@@ -24,20 +24,22 @@ public class SequentialSearchAutocomplete implements Autocomplete {
 
     @Override
     public void addAll(Collection<? extends CharSequence> terms) {
-        for (CharSequence element: terms){
+        for (CharSequence element : terms){
             this.terms.add(element);
         }
-
     }
 
     @Override
     public List<CharSequence> allMatches(CharSequence prefix) {
-        List<CharSequence> matches = new ArrayList<>();
-        for (CharSequence term : terms) {
-            if(term.subSequence(0, prefix.length()).equals(prefix)) {
-                matches.add(term);
+        List<CharSequence> result = new ArrayList<>();
+        for (CharSequence item : this.terms) {
+            if (prefix.length() <= item.length()) {
+                CharSequence part = item.subSequence(0, prefix.length());
+                if (CharSequence.compare(prefix, part) == 0) {
+                   result.add(item);
+                }
             }
         }
-        return matches;
-    }
+        return result;
+        }
 }

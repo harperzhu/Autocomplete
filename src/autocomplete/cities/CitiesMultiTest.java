@@ -28,7 +28,7 @@ class CitiesMultiTest {
     /**
      * Path to the cities dataset.
      */
-    private static final String PATH = "data/cities.tsv.gz";
+    private static final String PATH = "/Users/qingyangcocoliu/Desktop/2021SU/CSE373/project1/data/cities.tsv.gz";
 
     /**
      * Print up to the first {@code MAX_MATCHES} given matches.
@@ -57,9 +57,9 @@ class CitiesMultiTest {
 
         // Testing implementations.
         Map<String, Autocomplete> implementations = Map.of(
-                "LinearSearchAutocomplete", new SequentialSearchAutocomplete(),
-                //"BinarySearchAutocomplete", new BinarySearchAutocomplete(),
-                "TernarySearchTreeAutocomplete", new TernarySearchTreeAutocomplete()
+                 // "LinearSearchAutocomplete", new SequentialSearchAutocomplete()
+                 "BinarySearchAutocomplete", new BinarySearchAutocomplete()
+                 // "TernarySearchTreeAutocomplete", new TernarySearchTreeAutocomplete()
         );
         // Add cities to each testing implementation.
         for (Autocomplete autocomplete : implementations.values()) {

@@ -33,7 +33,7 @@ class CitiesInputSizeExperiments {
     /**
      * Path to the cities dataset.
      */
-    private static final String PATH = "data/cities.tsv.gz";
+    private static final String PATH = "/Users/qingyangcocoliu/Desktop/2021SU/CSE373/project1/data/cities.tsv.gz";
 
     public static void main(String[] args) throws IOException {
         Set<String> unique = new HashSet<>(MAX_CITIES, 1.0f);
@@ -52,9 +52,9 @@ class CitiesInputSizeExperiments {
         // Testing implementations.
         Map<String, Supplier<Autocomplete>> implementations = Map.of(
                 "TreeSetAutocomplete", TreeSetAutocomplete::new,
-                "LinearSearchAutocomplete", SequentialSearchAutocomplete::new,
-                //"BinarySearchAutocomplete", BinarySearchAutocomplete::new,
-                "TernarySearchTreeAutocomplete", TernarySearchTreeAutocomplete::new
+                // "LinearSearchAutocomplete", SequentialSearchAutocomplete::new
+                "BinarySearchAutocomplete", BinarySearchAutocomplete::new
+                // "TernarySearchTreeAutocomplete", TernarySearchTreeAutocomplete::new
         );
         for (String name : implementations.keySet()) {
             System.out.println();
