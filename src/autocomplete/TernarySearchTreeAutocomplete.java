@@ -1,5 +1,6 @@
 package autocomplete;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -24,62 +25,101 @@ public class TernarySearchTreeAutocomplete implements Autocomplete {
     @Override
     public void addAll(Collection<? extends CharSequence> terms) {
         // TODO: Replace with your code
-        throw new UnsupportedOperationException("Not implemented yet");
-        for (CharSequence key : terms) {
-            overallRoot = put(overallRoot, key, 0);
-        }
+        for(CharSequence key: terms) {
+            overallRoot = get(overallRoot, key, 0);
+    	  }
     }
     
-    private Node get(Node x, CharSequence key, int d) {
-        if (x == null) return null;
-        char data = key.charAt(d);
-        if      (data < x.data)        return get(x.left,  key, d);
-        else if (data > x.data)        return get(x.right, key, d);
-        else if (d < key.length() - 1) return get(x.mid,   key, d + 1);
-        else                           return x;
-    }
-    
-    private Node put(Node x, CharSequence key, int d) {
-        char data = key.charAt(d);       
-        if (x == null) {
-            x = new Node(key.charAt(d), true);
-            x.data = data;
+    private Node get(Node root, CharSequence key, int index) {
+    	  if (root == null) {
+    		  root = new Node(key.charAt(index), false);
+     	  }
+    	
+    	  if (key.charAt(index) < root.data) {
+            root.left = get(root.left, key, index);
+        } else if (key.charAt(index) > root.data) {
+            root.right = get(root.right, key, index);
+        } else {
+            if (index + 1 < key.length()) {
+                root.mid = get(root.mid, key, index + 1);
+            } else {
+                root.isTerm = true;
+            }
         }
+        return root;	
+    }
 
-        data = key.charAt(d);
-        if      (data < x.data)        x.left  = put(x.left,  key, d);
-        else if (data > x.data)        x.right = put(x.right, key, d);
-        else                           x.mid   = put(x.mid,   key, d + 1);
-        return x;
-    }
-    
-    private void collect(Node x, StringBuilder prefix, List<CharSequence> list) {
-        if (x == null) return;
-        collect(x.left, prefix, list);
-        prefix.append(x.data);
-        collect(x.mid, prefix, list);
-        prefix.deleteCharAt(prefix.length() - 1);
-        collect(x.right, prefix, list);
-    }
-    
     @Override
     public List<CharSequence> allMatches(CharSequence prefix) {
-        // TODO: Replace with your code
-        throw new UnsupportedOperationException("Not implemented yet");
-        if (prefix == null) {
-            throw new NullPointerException("calls keysWithPrefix() with null argument");
-        } else if (prefix.length() == 0) {
-            throw new IllegalArgumentException("prefix must have length >= 1");
-        }
+        // TODO: Replace with your code  	
+        // throw new UnsupportedOperationException("Not implemented yet");
         
-        // This line of code has an error
-        List<CharSequence> newList = new ArrayList<>();
-        Node x = get(overallRoot, prefix, 0);
-        if (x == null) return newList;
-        collect(x.mid, new StringBuilder(prefix), newList);
-        return newList;
+        List<CharSequence> list = new ArrayList<>();
+    	  Node target = put(overallRoot, (String) prefix, 0);
+    	
+    	  if(target.isTerm) {
+    	      list.add(prefix);
+    	  }
+        
+    	  subMatch(target.mid, list, (String) prefix);
+    	
+    	  return list;
+    }
+    
+    private void subMatch(Node root, List<CharSequence> list, String words) {
+    	  if (root == null) {
+    		  return;
+    	  }
+    	
+    	  if (root.isTerm) {
+    		  list.add (words + root.data);
+    	  }
+        
+    	  if (root.mid != null) {
+    		  subMatch (root.mid, list, words + root.data);
+    	  }
+        
+    	  if (root.left != null) {
+    		  subMatch (root.left, list, words);
+    	  }
+        
+    	  if (root.right != null) {
+    		  subMatch (root.right, list, words);
+    	  }
     }
 
+    private Node put(Node root, String word, int index) {
+    	  if(root == null) {
+    	      return root;
+    	  }
+        
+    	  char c = word.charAt(index);
+    	  if (c == root.data) {                       
+            if (word.length() == index + 1) {                          
+                return root;
+            } else {
+                if (root.mid == null) {                                          
+                    return root.mid;
+                } else {                                   
+                    return put(root.mid, word, index + 1);  
+                } 
+            }
+        } else if (c < root.data) {
+            if (root.left == null) {
+                return root.left;
+            } else {        
+                return put(root.left, word, index);
+            }
+        } else { 
+            if (root.right == null) {
+                return root.right;
+            } else {                                            
+                return put(root.right, word, index);
+            }
+        }
+    }
+    
+  
     /**
      * A search tree node representing a single character in an autocompletion term.
      */
