@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a2546d52-a97f-42a8-97f1-fd6fc25884e9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Autocomplete" beforeDir="false" afterPath="$PROJECT_DIR$/Autocomplete" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Autocomplete/src/autocomplete/BinarySearchAutocomplete.java" beforeDir="false" afterPath="$PROJECT_DIR$/Autocomplete/src/autocomplete/BinarySearchAutocomplete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Autocomplete/src/autocomplete/SequentialSearchAutocomplete.java" beforeDir="false" afterPath="$PROJECT_DIR$/Autocomplete/src/autocomplete/SequentialSearchAutocomplete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Autocomplete/src/autocomplete/TernarySearchTreeAutocomplete.java" beforeDir="false" afterPath="$PROJECT_DIR$/Autocomplete/src/autocomplete/TernarySearchTreeAutocomplete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/autocomplete/cities/CitiesInputSizeExperiments.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/autocomplete/cities/CitiesInputSizeExperiments.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/autocomplete/cities/CitiesInputSizeExperiments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/autocomplete/cities/CitiesInputSizeExperiments.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/autocomplete/cities/CitiesMultiTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/autocomplete/cities/CitiesMultiTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/autocomplete/cities/CitiesMultiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/autocomplete/cities/CitiesMultiTest.java" afterDir="false" />
+    <list default="true" id="a2546d52-a97f-42a8-97f1-fd6fc25884e9" name="Default Changelist" comment="First attempt with UnsortedArrayMinPQ">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/minpq/HeapMinPQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/minpq/HeapMinPQ.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +22,8 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -39,7 +34,37 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1626313260709</updated>
+      <workItem from="1627286861559" duration="2587000" />
+      <workItem from="1627667125764" duration="1000" />
+      <workItem from="1627667147234" duration="4456000" />
     </task>
+    <task id="LOCAL-00001" summary="First attempt with UnsortedArrayMinPQ">
+      <created>1627286911210</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1627286911210</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First attempt with UnsortedArrayMinPQ" />
+    <option name="LAST_COMMIT_MESSAGE" value="First attempt with UnsortedArrayMinPQ" />
   </component>
 </project>

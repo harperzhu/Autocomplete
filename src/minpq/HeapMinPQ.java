@@ -3,6 +3,9 @@ package minpq;
 import java.util.Comparator;
 import java.util.NoSuchElementException;
 import java.util.PriorityQueue;
+import java.util.Iterator;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * {@link PriorityQueue} implementation of the {@link ExtrinsicMinPQ} interface.
@@ -25,26 +28,25 @@ public class HeapMinPQ<T> implements ExtrinsicMinPQ<T> {
 
     @Override
     public void add(T item, double priority) {
-        if (contains(item)) {
+        if (pq.contains(item)) {
             throw new IllegalArgumentException("Already contains " + item);
         }
-        // TODO: Replace with your code
-        throw new UnsupportedOperationException("Not implemented yet");
+        pq.add(new PriorityNode<>(item, priority));
     }
 
     @Override
     public boolean contains(T item) {
-        // TODO: Replace with your code
-        throw new UnsupportedOperationException("Not implemented yet");
+        PriorityNode<T> temp = new PriorityNode<>(item, 0);
+        return pq.contains(temp);
     }
 
     @Override
     public T peekMin() {
-        if (isEmpty()) {
+        if (pq.isEmpty()) {
             throw new NoSuchElementException("PQ is empty");
         }
-        // TODO: Replace with your code
-        throw new UnsupportedOperationException("Not implemented yet");
+        PriorityNode<T> min = pq.peek();
+        return min.item();
     }
 
     @Override
@@ -52,8 +54,9 @@ public class HeapMinPQ<T> implements ExtrinsicMinPQ<T> {
         if (isEmpty()) {
             throw new NoSuchElementException("PQ is empty");
         }
-        // TODO: Replace with your code
-        throw new UnsupportedOperationException("Not implemented yet");
+        PriorityNode<T> min = pq.peek();
+        return pq.remove().item();
+
     }
 
     @Override
@@ -61,13 +64,20 @@ public class HeapMinPQ<T> implements ExtrinsicMinPQ<T> {
         if (!contains(item)) {
             throw new NoSuchElementException("PQ does not contain " + item);
         }
-        // TODO: Replace with your code
-        throw new UnsupportedOperationException("Not implemented yet");
+        List<PriorityNode<T>> items = new ArrayList<>();
+        PriorityNode<T> temp = new PriorityNode<>(item, 0);
+        items.add(temp);
+        temp.setPriority(priority);
     }
 
     @Override
     public int size() {
-        // TODO: Replace with your code
-        throw new UnsupportedOperationException("Not implemented yet");
+        int size=0;
+        Iterator iterator = pq.iterator();
+        while(iterator.hasNext()){
+            size += 1;
+        }
+        return size;
     }
+
 }
