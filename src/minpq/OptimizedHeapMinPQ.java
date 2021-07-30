@@ -35,14 +35,13 @@ public class OptimizedHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
         if (contains(item)) {
             throw new IllegalArgumentException("Already contains " + item);
         }
-        // TODO: Replace with your code
-        throw new UnsupportedOperationException("Not implemented yet");
+        PriorityNode<T> temp = new PriorityNode<>(item,priority);
+        items.add(temp);
     }
 
     @Override
     public boolean contains(T item) {
-        // TODO: Replace with your code
-        throw new UnsupportedOperationException("Not implemented yet");
+        return items.contains(item);
     }
 
     @Override
@@ -50,8 +49,13 @@ public class OptimizedHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
         if (isEmpty()) {
             throw new NoSuchElementException("PQ is empty");
         }
-        // TODO: Replace with your code
-        throw new UnsupportedOperationException("Not implemented yet");
+        PriorityNode<T> min = items.get(0);
+        for(int i=0;i<items.size();i++){
+            if(items.get(i).priority()<min.priority()){
+                min = items.get(i);
+            }
+        }
+        return min.item();
     }
 
     @Override
@@ -59,8 +63,10 @@ public class OptimizedHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
         if (isEmpty()) {
             throw new NoSuchElementException("PQ is empty");
         }
-        // TODO: Replace with your code
-        throw new UnsupportedOperationException("Not implemented yet");
+        T itemValue = peekMin();
+        itemToIndex.remove(itemValue);
+        items.remove(itemValue);
+        return itemValue;
     }
 
     @Override
@@ -68,13 +74,13 @@ public class OptimizedHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
         if (!contains(item)) {
             throw new NoSuchElementException("PQ does not contain " + item);
         }
-        // TODO: Replace with your code
-        throw new UnsupportedOperationException("Not implemented yet");
+        double priorityValue = itemToIndex.get(item);
+        items.remove(item);
+        items.add(new PriorityNode<>(item,priority));
     }
 
     @Override
     public int size() {
-        // TODO: Replace with your code
-        throw new UnsupportedOperationException("Not implemented yet");
+        return items.size();
     }
 }

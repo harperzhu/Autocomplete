@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2546d52-a97f-42a8-97f1-fd6fc25884e9" name="Default Changelist" comment="done with HeapMinPQ">
-      <change beforePath="$PROJECT_DIR$/src/minpq/HeapMinPQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/minpq/HeapMinPQ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/minpq/OptimizedHeapMinPQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/minpq/OptimizedHeapMinPQ.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +49,7 @@
       <updated>1626313260709</updated>
       <workItem from="1627286861559" duration="2587000" />
       <workItem from="1627667125764" duration="1000" />
-      <workItem from="1627667147234" duration="7539000" />
+      <workItem from="1627667147234" duration="10057000" />
     </task>
     <task id="LOCAL-00001" summary="First attempt with UnsortedArrayMinPQ">
       <created>1627286911210</created>
@@ -71,7 +72,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627676063383</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="done with HeapMinPQ">
+      <created>1627676116035</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1627676116035</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
