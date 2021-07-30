@@ -55,7 +55,8 @@ public class HeapMinPQ<T> implements ExtrinsicMinPQ<T> {
             throw new NoSuchElementException("PQ is empty");
         }
         PriorityNode<T> min = pq.peek();
-        return pq.remove().item();
+        pq.remove(min.item());
+        return min.item();
 
     }
 
@@ -64,20 +65,12 @@ public class HeapMinPQ<T> implements ExtrinsicMinPQ<T> {
         if (!contains(item)) {
             throw new NoSuchElementException("PQ does not contain " + item);
         }
-        List<PriorityNode<T>> items = new ArrayList<>();
-        PriorityNode<T> temp = new PriorityNode<>(item, 0);
-        items.add(temp);
-        temp.setPriority(priority);
+        pq.remove(item);
+        pq.add(new PriorityNode<T>(item, priority));
     }
 
     @Override
     public int size() {
-        int size=0;
-        Iterator iterator = pq.iterator();
-        while(iterator.hasNext()){
-            size += 1;
-        }
-        return size;
+        return pq.size();
     }
-
 }

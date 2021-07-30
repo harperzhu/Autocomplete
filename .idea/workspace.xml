@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a2546d52-a97f-42a8-97f1-fd6fc25884e9" name="Default Changelist" comment="First attempt with UnsortedArrayMinPQ">
+    <list default="true" id="a2546d52-a97f-42a8-97f1-fd6fc25884e9" name="Default Changelist" comment="First attempt with HeapMinPQ">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/minpq/HeapMinPQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/minpq/HeapMinPQ.java" afterDir="false" />
     </list>
@@ -26,6 +26,19 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -36,7 +49,7 @@
       <updated>1626313260709</updated>
       <workItem from="1627286861559" duration="2587000" />
       <workItem from="1627667125764" duration="1000" />
-      <workItem from="1627667147234" duration="4456000" />
+      <workItem from="1627667147234" duration="7425000" />
     </task>
     <task id="LOCAL-00001" summary="First attempt with UnsortedArrayMinPQ">
       <created>1627286911210</created>
@@ -45,7 +58,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627286911210</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="First attempt with HeapMinPQ">
+      <created>1627673007677</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1627673007677</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -65,6 +85,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First attempt with UnsortedArrayMinPQ" />
-    <option name="LAST_COMMIT_MESSAGE" value="First attempt with UnsortedArrayMinPQ" />
+    <MESSAGE value="First attempt with HeapMinPQ" />
+    <option name="LAST_COMMIT_MESSAGE" value="First attempt with HeapMinPQ" />
   </component>
 </project>
