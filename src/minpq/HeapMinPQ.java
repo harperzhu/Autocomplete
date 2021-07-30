@@ -3,9 +3,6 @@ package minpq;
 import java.util.Comparator;
 import java.util.NoSuchElementException;
 import java.util.PriorityQueue;
-import java.util.Iterator;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * {@link PriorityQueue} implementation of the {@link ExtrinsicMinPQ} interface.
