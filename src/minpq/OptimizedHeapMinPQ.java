@@ -81,6 +81,7 @@ public class OptimizedHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
 
     @Override
     public int size() {
-        return items.size();
+        size = items.size();
+        return size;
     }
 }

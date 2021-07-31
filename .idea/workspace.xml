@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a2546d52-a97f-42a8-97f1-fd6fc25884e9" name="Default Changelist" comment="done with HeapMinPQ">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="a2546d52-a97f-42a8-97f1-fd6fc25884e9" name="Default Changelist" comment="done with OptimizedHeapMinePq">
       <change beforePath="$PROJECT_DIR$/src/minpq/OptimizedHeapMinPQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/minpq/OptimizedHeapMinPQ.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +48,7 @@
       <updated>1626313260709</updated>
       <workItem from="1627286861559" duration="2587000" />
       <workItem from="1627667125764" duration="1000" />
-      <workItem from="1627667147234" duration="10057000" />
+      <workItem from="1627667147234" duration="10820000" />
     </task>
     <task id="LOCAL-00001" summary="First attempt with UnsortedArrayMinPQ">
       <created>1627286911210</created>
@@ -79,7 +78,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627676116035</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="done with OptimizedHeapMinePq">
+      <created>1627686904203</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1627686904203</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,6 +107,7 @@
     <MESSAGE value="First attempt with UnsortedArrayMinPQ" />
     <MESSAGE value="First attempt with HeapMinPQ" />
     <MESSAGE value="done with HeapMinPQ" />
-    <option name="LAST_COMMIT_MESSAGE" value="done with HeapMinPQ" />
+    <MESSAGE value="done with OptimizedHeapMinePq" />
+    <option name="LAST_COMMIT_MESSAGE" value="done with OptimizedHeapMinePq" />
   </component>
 </project>
