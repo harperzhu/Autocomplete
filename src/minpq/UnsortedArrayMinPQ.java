@@ -64,9 +64,9 @@ public class UnsortedArrayMinPQ<T> implements ExtrinsicMinPQ<T> {
         }
         for(int i=0; i<items.size();i++){
             if(items.get(i).equals(min)){
-                items.get(i).equals(items.get(i+1));
+                min = items.get(i);
+                items.remove(items.get(i));
             }
-
         }
         return min.item();
     }
@@ -76,10 +76,11 @@ public class UnsortedArrayMinPQ<T> implements ExtrinsicMinPQ<T> {
         if (!contains(item)) {
             throw new NoSuchElementException("PQ does not contain " + item);
         }
+        PriorityNode<T> temp = new PriorityNode<T>(item,priority);
         for(int i=0; i<items.size();i++){
-            if(items.get(i).equals(item)){
-                items.get(i).equals(null);
-                items.get(i).equals(new PriorityNode<>(item, priority));
+            if(items.get(i).equals(temp)){
+                items.remove(items.get(i));
+                items.add(new PriorityNode<>(item, priority));
             }
         }
     }

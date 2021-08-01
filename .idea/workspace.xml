@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a2546d52-a97f-42a8-97f1-fd6fc25884e9" name="Default Changelist" comment="done with HeapMinPQ debug">
+    <list default="true" id="a2546d52-a97f-42a8-97f1-fd6fc25884e9" name="Default Changelist" comment="debugging">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/project/minpq/HeapMinPQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project/minpq/HeapMinPQ.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/project/minpq/OptimizedHeapMinPQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project/minpq/OptimizedHeapMinPQ.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/project/minpq/UnsortedArrayMinPQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project/minpq/UnsortedArrayMinPQ.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/project/minpq/moderator/ModeratorMultiTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project/minpq/moderator/ModeratorMultiTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/minpq/HeapMinPQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/minpq/HeapMinPQ.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/minpq/OptimizedHeapMinPQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/minpq/OptimizedHeapMinPQ.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/minpq/UnsortedArrayMinPQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/minpq/UnsortedArrayMinPQ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/minpq/moderator/ModeratorMultiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/minpq/moderator/ModeratorMultiTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,17 +48,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.ModeratorMultiTest" />
@@ -75,7 +66,7 @@
       <workItem from="1627667125764" duration="1000" />
       <workItem from="1627667147234" duration="11830000" />
       <workItem from="1627782757897" duration="2876000" />
-      <workItem from="1627791747662" duration="10557000" />
+      <workItem from="1627791747662" duration="19464000" />
     </task>
     <task id="LOCAL-00001" summary="First attempt with UnsortedArrayMinPQ">
       <created>1627286911210</created>
@@ -126,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627794680483</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="debugging">
+      <created>1627811472127</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1627811472127</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,7 +148,8 @@
     <MESSAGE value="done with HeapMinPQ" />
     <MESSAGE value="done with OptimizedHeapMinePq" />
     <MESSAGE value="done with HeapMinPQ debug" />
-    <option name="LAST_COMMIT_MESSAGE" value="done with HeapMinPQ debug" />
+    <MESSAGE value="debugging" />
+    <option name="LAST_COMMIT_MESSAGE" value="debugging" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
