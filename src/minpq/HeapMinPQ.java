@@ -33,8 +33,7 @@ public class HeapMinPQ<T> implements ExtrinsicMinPQ<T> {
 
     @Override
     public boolean contains(T item) {
-        PriorityNode<T> temp = new PriorityNode<>(item, 0);
-        return pq.contains(temp);
+        return pq.contains(item);
     }
 
     @Override
@@ -52,7 +51,7 @@ public class HeapMinPQ<T> implements ExtrinsicMinPQ<T> {
             throw new NoSuchElementException("PQ is empty");
         }
         PriorityNode<T> min = pq.peek();
-        pq.remove(min.item());
+        pq.remove(min);
         return min.item();
 
     }
