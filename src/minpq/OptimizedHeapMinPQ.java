@@ -21,6 +21,7 @@ public class OptimizedHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
      * The number of elements in the heap.
      */
     private int size;
+    private PriorityNode<T> minNode;
 
     /**
      * Constructs an empty instance.
@@ -28,6 +29,7 @@ public class OptimizedHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
     public OptimizedHeapMinPQ() {
         items = new ArrayList<>();
         itemToIndex = new HashMap<>();
+        minNode = new PriorityNode<T>(null, 9999);
     }
 
     @Override
@@ -35,8 +37,14 @@ public class OptimizedHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
         if (contains(item)) {
             throw new IllegalArgumentException("Already contains " + item);
         }
-        PriorityNode<T> temp = new PriorityNode<>(item,priority);
+        PriorityNode<T> temp = new PriorityNode<>(item, priority);
+        if(temp.priority() < minNode.priority()) {
+            minNode = temp;
+        }
         items.add(temp);
+        itemToIndex.put(temp.item(), size + 1);
+        size++;
+
     }
 
     @Override
@@ -49,13 +57,7 @@ public class OptimizedHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
         if (isEmpty()) {
             throw new NoSuchElementException("PQ is empty");
         }
-        PriorityNode<T> min = items.get(0);
-        for(int i=0;i<items.size();i++){
-            if(items.get(i).priority()<min.priority()){
-                min = items.get(i);
-            }
-        }
-        return min.item();
+        return minNode.item();
     }
 
     @Override
@@ -63,10 +65,9 @@ public class OptimizedHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
         if (isEmpty()) {
             throw new NoSuchElementException("PQ is empty");
         }
-        T itemValue = peekMin();
-        itemToIndex.remove(itemValue);
-        items.remove(itemValue);
-        return itemValue;
+        itemToIndex.remove(peekMin());
+        items.remove(peekMin());
+        return peekMin();
     }
 
     @Override
@@ -76,7 +77,7 @@ public class OptimizedHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
         }
         double priorityValue = itemToIndex.get(item);
         items.remove(item);
-        items.add(new PriorityNode<>(item,priority));
+        items.add(new PriorityNode<>(item,priorityValue));
     }
 
     @Override

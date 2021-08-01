@@ -1,8 +1,6 @@
 package minpq;
 
-import java.util.Comparator;
-import java.util.NoSuchElementException;
-import java.util.PriorityQueue;
+import java.util.*;
 
 /**
  * {@link PriorityQueue} implementation of the {@link ExtrinsicMinPQ} interface.
@@ -25,7 +23,7 @@ public class HeapMinPQ<T> implements ExtrinsicMinPQ<T> {
 
     @Override
     public void add(T item, double priority) {
-        if (pq.contains(item)) {
+        if (contains(item)) {
             throw new IllegalArgumentException("Already contains " + item);
         }
         pq.add(new PriorityNode<>(item, priority));
@@ -61,6 +59,7 @@ public class HeapMinPQ<T> implements ExtrinsicMinPQ<T> {
         if (!contains(item)) {
             throw new NoSuchElementException("PQ does not contain " + item);
         }
+        //double priorityValue
         pq.remove(item);
         pq.add(new PriorityNode<T>(item, priority));
     }

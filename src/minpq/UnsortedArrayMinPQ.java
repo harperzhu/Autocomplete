@@ -22,6 +22,7 @@ public class UnsortedArrayMinPQ<T> implements ExtrinsicMinPQ<T> {
      */
     public UnsortedArrayMinPQ() {
         items = new ArrayList<>();
+        min = new PriorityNode<>(null, 9999);
 
     }
 
