@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a2546d52-a97f-42a8-97f1-fd6fc25884e9" name="Default Changelist" comment="done with debugging">
+    <list default="true" id="a2546d52-a97f-42a8-97f1-fd6fc25884e9" name="Default Changelist" comment="modify OptimizedHeapMinPQ">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/project/minpq/OptimizedHeapMinPQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project/minpq/OptimizedHeapMinPQ.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project/minpq/UnsortedArrayMinPQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project/minpq/UnsortedArrayMinPQ.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/minpq/OptimizedHeapMinPQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/minpq/OptimizedHeapMinPQ.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/minpq/UnsortedArrayMinPQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/minpq/UnsortedArrayMinPQ.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +62,7 @@
       <workItem from="1627782757897" duration="2876000" />
       <workItem from="1627791747662" duration="19464000" />
       <workItem from="1627861750576" duration="846000" />
-      <workItem from="1627871309340" duration="9104000" />
+      <workItem from="1627871309340" duration="9452000" />
     </task>
     <task id="LOCAL-00001" summary="First attempt with UnsortedArrayMinPQ">
       <created>1627286911210</created>
@@ -136,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627883332705</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="modify OptimizedHeapMinPQ">
+      <created>1627891528171</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1627891528171</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,7 +168,8 @@
     <MESSAGE value="debugging" />
     <MESSAGE value="finished with heapminpq" />
     <MESSAGE value="done with debugging" />
-    <option name="LAST_COMMIT_MESSAGE" value="done with debugging" />
+    <MESSAGE value="modify OptimizedHeapMinPQ" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify OptimizedHeapMinPQ" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
