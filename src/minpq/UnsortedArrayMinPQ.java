@@ -33,7 +33,7 @@ public class UnsortedArrayMinPQ<T> implements ExtrinsicMinPQ<T> {
             min = new_item;
         }
         if (!items.contains(new_item)) {
-                items.add(new_item);
+            items.add(new_item);
         }
     }
 
@@ -62,12 +62,13 @@ public class UnsortedArrayMinPQ<T> implements ExtrinsicMinPQ<T> {
         if (items.isEmpty()) {
             throw new NoSuchElementException("PQ is empty");
         }
-        for(int i=0; i<items.size();i++){
-            if(items.get(i).equals(min)){
-                min = items.get(i);
-                items.remove(items.get(i));
+        PriorityNode<T> min = items.get(0);
+        for(PriorityNode<T> p :items){
+            if(p.priority() < min.priority()){
+                min = p;
             }
         }
+        items.remove(min);
         return min.item();
     }
 

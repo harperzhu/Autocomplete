@@ -49,7 +49,7 @@ public class OptimizedHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
 
     @Override
     public boolean contains(T item) {
-        return items.contains(item);
+        return itemToIndex.containsKey(item);
     }
 
     @Override
@@ -65,19 +65,25 @@ public class OptimizedHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
         if (isEmpty()) {
             throw new NoSuchElementException("PQ is empty");
         }
-        itemToIndex.remove(peekMin());
-        items.remove(peekMin());
-        return peekMin();
+        PriorityNode<T> min = items.get(0);
+        for (PriorityNode<T> p : items) {
+            if (p.priority() < min.priority()) {
+                min = p;
+            }
+        }
+        items.remove(min);
+        itemToIndex.remove(min.item());
+        return min.item();
     }
 
     @Override
     public void changePriority(T item, double priority) {
-        if (!items.contains(item)) {
-            throw new NoSuchElementException("PQ does not contain " + item);
-        }
+//         if (!items.contains(item)) {
+//             throw new NoSuchElementException("PQ does not contain " + item);
+//         }
         double priorityValue = itemToIndex.get(item);
-        items.remove(item);
-        items.add(new PriorityNode<>(item,priorityValue));
+        items.remove(new PriorityNode<T> (item, priorityValue));
+        items.add(new PriorityNode<T>(item, priority));
     }
 
     @Override
