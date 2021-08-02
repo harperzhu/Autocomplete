@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a2546d52-a97f-42a8-97f1-fd6fc25884e9" name="Default Changelist" comment="finished with heapminpq">
+    <list default="true" id="a2546d52-a97f-42a8-97f1-fd6fc25884e9" name="Default Changelist" comment="done with debugging">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/project/minpq/OptimizedHeapMinPQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project/minpq/OptimizedHeapMinPQ.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/project/minpq/UnsortedArrayMinPQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project/minpq/UnsortedArrayMinPQ.class" afterDir="false" />
@@ -64,7 +64,7 @@
       <workItem from="1627782757897" duration="2876000" />
       <workItem from="1627791747662" duration="19464000" />
       <workItem from="1627861750576" duration="846000" />
-      <workItem from="1627871309340" duration="2255000" />
+      <workItem from="1627871309340" duration="9104000" />
     </task>
     <task id="LOCAL-00001" summary="First attempt with UnsortedArrayMinPQ">
       <created>1627286911210</created>
@@ -129,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627861766434</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="done with debugging">
+      <created>1627883332705</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1627883332705</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,7 +162,8 @@
     <MESSAGE value="done with HeapMinPQ debug" />
     <MESSAGE value="debugging" />
     <MESSAGE value="finished with heapminpq" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished with heapminpq" />
+    <MESSAGE value="done with debugging" />
+    <option name="LAST_COMMIT_MESSAGE" value="done with debugging" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

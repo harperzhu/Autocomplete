@@ -20,7 +20,6 @@ public class OptimizedHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
     /**
      * The number of elements in the heap.
      */
-    private int size;
     private PriorityNode<T> minNode;
 
     /**
@@ -42,8 +41,7 @@ public class OptimizedHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
             minNode = temp;
         }
         items.add(temp);
-        itemToIndex.put(temp.item(), size + 1);
-        size++;
+        itemToIndex.put(temp.item(), size() - 1);
 
     }
 
@@ -81,14 +79,15 @@ public class OptimizedHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
 //         if (!items.contains(item)) {
 //             throw new NoSuchElementException("PQ does not contain " + item);
 //         }
-        double priorityValue = itemToIndex.get(item);
-        items.remove(new PriorityNode<T> (item, priorityValue));
+        int index = itemToIndex.get(item);
+        itemToIndex.remove(item);
+        items.remove(index);
         items.add(new PriorityNode<T>(item, priority));
+        itemToIndex.put(item, size()-1);
     }
 
     @Override
     public int size() {
-        size = items.size();
-        return size;
+        return items.size();
     }
 }
