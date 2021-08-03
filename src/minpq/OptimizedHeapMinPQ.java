@@ -80,10 +80,7 @@ public class OptimizedHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
 //             throw new NoSuchElementException("PQ does not contain " + item);
 //         }
         int index = itemToIndex.get(item);
-        items.remove(index);
-        itemToIndex.remove(item);
-        items.add(new PriorityNode<T>(item, priority));
-        itemToIndex.put(item, size()-1);
+        items.get(index).setPriority(priority);
     }
 
     @Override
