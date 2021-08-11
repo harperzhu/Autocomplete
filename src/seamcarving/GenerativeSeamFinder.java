@@ -5,6 +5,7 @@ import graphs.Graph;
 import graphs.ShortestPathSolver;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
@@ -61,26 +62,6 @@ public class GenerativeSeamFinder implements SeamFinder {
          * The {@link EnergyFunction} for {@link #neighbors(Node)}.
          */
         private final EnergyFunction f;
-        /**
-         * Source {@link Node} for the adjacency list graph.
-         */
-        private final Node source = new Node() {
-            @Override
-            public List<Edge<Node>> neighbors(Picture picture, EnergyFunction f) {
-                // TODO: Replace with your code
-                throw new UnsupportedOperationException("Not implemented yet");
-            }
-        };
-        /**
-         * Sink {@link Node} for the adjacency list graph.
-         */
-        private final Node sink = new Node() {
-            @Override
-            public List<Edge<Node>> neighbors(Picture picture, EnergyFunction f) {
-                // TODO: Replace with your code
-                throw new UnsupportedOperationException("Not implemented yet");
-            }
-        };
 
         /**
          * Constructs a generative adjacency list graph. All work is deferred to implementations of
@@ -94,11 +75,46 @@ public class GenerativeSeamFinder implements SeamFinder {
             this.f = f;
         }
 
+        /**
+         * Source {@link Node} for the adjacency list graph.
+         */
+        private final Node source = new Node() {
+            @Override
+            public List<Edge<Node>> neighbors(Picture picture, EnergyFunction f) {
+                //create a for loop to loop through the entire leftmost column
+                List<Pixel> list = new ArrayList<>();
+                List<Edge<Node>> edgeList = new ArrayList<>();
+                for(int i=0;i<picture.height();i++){
+                    list.add(new Pixel(0,i));
+                    //create edges between that me with neighbor
+                    edgeList.add(new Edge<>(source, list.get(i),f.apply(picture,list.get(i).x,picture,list.get(i).y)));
+                }
+
+                //order it with shortest path
+                //NOT IMPLEMENTED YET
+                return edgeList;
+                };
+            };
+
+        /**
+         * Sink {@link Node} for the adjacency list graph.
+         */
+        private final Node sink = new Node() {
+            @Override
+            public List<Edge<Node>> neighbors(Picture picture, EnergyFunction f) {
+                //sink should grab the rightmost neighbor, which return the empty list in this case
+                return List.of();// Sink has no neighbors.
+            }
+        };
+
+
         @Override
         public List<Edge<Node>> neighbors(Node node) {
+            //call the neighbor function in pixel class
+            //if a regular node, then would be able to grab its neighbor
             return node.neighbors(picture, f);
         }
-
+};
         /**
          * A pixel in the {@link PixelGraph} representation of the {@link Picture} with {@link EnergyFunction}-weighted
          * edges to neighbors.
@@ -110,6 +126,8 @@ public class GenerativeSeamFinder implements SeamFinder {
         public class Pixel implements Node {
             private final int x;
             private final int y;
+            private final List<Edge<Node>> neighbors;
+
 
             /**
              * Constructs a pixel representing the (<i>x</i>, <i>y</i>) indices in the picture.
@@ -120,12 +138,27 @@ public class GenerativeSeamFinder implements SeamFinder {
             public Pixel(int x, int y) {
                 this.x = x;
                 this.y = y;
+                this.neighbors = new ArrayList<>(3);
             }
 
             @Override
             public List<Edge<Node>> neighbors(Picture picture, EnergyFunction f) {
-                // TODO: Replace with your code
-                throw new UnsupportedOperationException("Not implemented yet");
+                //create pixel for each right top, middle, bottom
+                Pixel rightTopPixel = new Pixel(x,y-1);
+                Pixel rightMiddlePixel = new Pixel(x,y);
+                Pixel rightBottomPixel = new Pixel(x,y+1);
+
+                //create edge from source to the right top.... bottom
+                Edge edgeToRightTopPixel = new Edge(this,rightTopPixel, f.apply(picture,x,y-1));
+                Edge edgeToRightMiddlePixel = new Edge(this,rightMiddlePixel, f.apply(picture,x,y));
+                Edge edgeToRightBottomPixel = new Edge(this,rightBottomPixel, f.apply(picture,x,y+1));
+
+                //add all of these edge to neighbors
+                neighbors.add(edgeToRightBottomPixel);
+                neighbors.add(edgeToRightTopPixel);
+                neighbors.add(edgeToRightMiddlePixel);
+
+                return neighbors;
             }
 
             @Override

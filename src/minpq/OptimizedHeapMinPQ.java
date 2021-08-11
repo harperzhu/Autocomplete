@@ -76,9 +76,9 @@ public class OptimizedHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
 
     @Override
     public void changePriority(T item, double priority) {
-//         if (!items.contains(item)) {
-//             throw new NoSuchElementException("PQ does not contain " + item);
-//         }
+         if (!items.contains(item)) {
+             throw new NoSuchElementException("PQ does not contain " + item);
+         }
         int index = itemToIndex.get(item);
         items.get(index).setPriority(priority);
     }
