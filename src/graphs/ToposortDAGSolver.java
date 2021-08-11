@@ -1,5 +1,8 @@
 package graphs;
 
+import minpq.DoubleMapMinPQ;
+import minpq.ExtrinsicMinPQ;
+
 import java.util.*;
 
 /**
@@ -21,8 +24,27 @@ public class ToposortDAGSolver<V> implements ShortestPathSolver<V> {
     public ToposortDAGSolver(Graph<V> graph, V start) {
         this.edgeTo = new HashMap<>();
         this.distTo = new HashMap<>();
-        // TODO: Replace with your code
-        throw new UnsupportedOperationException("Not implemented yet");
+        ExtrinsicMinPQ<V> pq = new DoubleMapMinPQ<>();
+        pq.add(start, 0.0);
+        edgeTo.put(start, null);
+        distTo.put(start, 0.0);
+        while (!pq.isEmpty()) {
+            V from = pq.removeMin();
+            for (Edge<V> e : graph.neighbors(from)) {
+                V to = e.to;
+                double oldDist = distTo.getOrDefault(to, Double.POSITIVE_INFINITY);
+                double newDist = distTo.get(from) + e.weight;
+                if (newDist < oldDist) {
+                    edgeTo.put(to, e);
+                    distTo.put(to, newDist);
+                    if (pq.contains(to)) {
+                        pq.changePriority(to, newDist);
+                    } else {
+                        pq.add(to, newDist);
+                    }
+                }
+            }
+        }
     }
 
     /**
@@ -34,8 +56,39 @@ public class ToposortDAGSolver<V> implements ShortestPathSolver<V> {
      * @param result  the destination for adding nodes.
      */
     private void dfsPostOrder(Graph<V> graph, V start, Set<V> visited, List<V> result) {
-        // TODO: Replace with your code
-        throw new UnsupportedOperationException("Not implemented yet");
+        //if the current node is visited
+        //find its destination
+        //if it is not visited, use recursion to add it into the visited set
+
+        if(visited.contains(start)){
+            for(V dest: result){
+                if(!visited.contains(result)){
+                    visited.add(dest);
+                    dfsPostOrder(graph, dest, visited, result);
+                    edgeTo.put(start,new Edge(start,dest,f.apply()));
+                }
+
+                while(!visited.contains(graph.neighbors(start))){
+                    for (Edge<V>: edgeTo.get(start)){
+                        double oldDist = distTo.get(dest);
+                        double newDist = distTo.get(start) + edgeTo.get(start).weight;
+                        if(newDist < oldDist){
+                            distTo.put(start,newDist);
+                            edgeTo.put(start,new Edge<V>(start,dest,f.apply()));
+                        }
+
+
+                    }
+                }
+            }
+        }
+
+        // Collections.reverse the list.
+
+
+        //For each node in reverse DFS post-order, "relax" the edge.
+        // If the new distance to the neighboring node using the given edge is better than the best-known distTo
+        // the neighboring node, update distTo and edgeTo accordingly.
     }
 
     @Override

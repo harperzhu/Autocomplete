@@ -94,6 +94,9 @@ public class GenerativeSeamFinder implements SeamFinder {
 
                 //order it with shortest path
                 //NOT IMPLEMENTED YET
+//                for(int i=0; i<edgeList.size();i++){
+//                    Collections.sort(edgeList.get(i).weight);
+//                }
                 return edgeList;
                 };
             };
