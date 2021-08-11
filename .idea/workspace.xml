@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a2546d52-a97f-42a8-97f1-fd6fc25884e9" name="Default Changelist" comment="done with OptimizedHeapMinPQ">
+    <list default="true" id="a2546d52-a97f-42a8-97f1-fd6fc25884e9" name="Default Changelist" comment="First attempt with GenerativeSeamFinder">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project/minpq/OptimizedHeapMinPQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project/minpq/OptimizedHeapMinPQ.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/minpq/OptimizedHeapMinPQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/minpq/OptimizedHeapMinPQ.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/seamcarving/GenerativeSeamFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/seamcarving/GenerativeSeamFinder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -43,6 +48,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.ModeratorMultiTest" />
@@ -66,7 +84,7 @@
       <workItem from="1627871309340" duration="9959000" />
       <workItem from="1627957313710" duration="4899000" />
       <workItem from="1628540891602" duration="12539000" />
-      <workItem from="1628642018360" duration="6903000" />
+      <workItem from="1628642018360" duration="7535000" />
     </task>
     <task id="LOCAL-00001" summary="First attempt with UnsortedArrayMinPQ">
       <created>1627286911210</created>
@@ -166,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627958868530</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="First attempt with GenerativeSeamFinder">
+      <created>1628649497570</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1628649497570</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,7 +220,8 @@
     <MESSAGE value="done with debugging" />
     <MESSAGE value="modify OptimizedHeapMinPQ" />
     <MESSAGE value="done with OptimizedHeapMinPQ" />
-    <option name="LAST_COMMIT_MESSAGE" value="done with OptimizedHeapMinPQ" />
+    <MESSAGE value="First attempt with GenerativeSeamFinder" />
+    <option name="LAST_COMMIT_MESSAGE" value="First attempt with GenerativeSeamFinder" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

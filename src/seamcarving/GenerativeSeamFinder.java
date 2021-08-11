@@ -87,7 +87,9 @@ public class GenerativeSeamFinder implements SeamFinder {
                 for(int i=0;i<picture.height();i++){
                     list.add(new Pixel(0,i));
                     //create edges between that me with neighbor
-                    edgeList.add(new Edge<>(source, list.get(i),f.apply(picture,list.get(i).x,picture,list.get(i).y)));
+                    int xCoordinate = list.get(i).x;
+                    int yCoordinate = list.get(i).y;
+                    edgeList.add(new Edge<>(source, list.get(i),f.apply(picture,xCoordinate,yCoordinate)));
                 }
 
                 //order it with shortest path
@@ -114,7 +116,8 @@ public class GenerativeSeamFinder implements SeamFinder {
             //if a regular node, then would be able to grab its neighbor
             return node.neighbors(picture, f);
         }
-};
+
+
         /**
          * A pixel in the {@link PixelGraph} representation of the {@link Picture} with {@link EnergyFunction}-weighted
          * edges to neighbors.
