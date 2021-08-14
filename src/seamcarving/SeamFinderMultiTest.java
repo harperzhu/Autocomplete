@@ -28,7 +28,7 @@ class SeamFinderMultiTest {
     /**
      * The base directory path for the images.
      */
-    private static final String BASE_PATH = "/Users/harperzhu/Desktop/CSE373/Autocomplete/src/seamcarving";
+    private static final String BASE_PATH = "data/seamcarving/";
     /**
      * The image files (.png) and corresponding expected seam costs (.txt) in the {@link #BASE_PATH}.
      */
