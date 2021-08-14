@@ -61,30 +61,16 @@ public class ToposortDAGSolver<V> implements ShortestPathSolver<V> {
         //if it is not visited, use recursion to add it into the visited set
 
         if(visited.contains(start)){
-            for(V dest: result){
-                if(!visited.contains(result)){
-                    visited.add(dest);
-                    dfsPostOrder(graph, dest, visited, result);
-                    edgeTo.put(start,new Edge(start,dest,f.apply()));
-                }
-
-                while(!visited.contains(graph.neighbors(start))){
-                    for (Edge<V>: edgeTo.get(start)){
-                        double oldDist = distTo.get(dest);
-                        double newDist = distTo.get(start) + edgeTo.get(start).weight;
-                        if(newDist < oldDist){
-                            distTo.put(start,newDist);
-                            edgeTo.put(start,new Edge<V>(start,dest,f.apply()));
-                        }
-
-
-                    }
-                }
-            }
+            return;
         }
 
-        // Collections.reverse the list.
+        visited.add(start);
+        for (Edge<V>e : graph.neighbors(start)) {
+            V to = e.to;
+            dfsPostOrder(graph, to, visited, result);
+        }
 
+        result.add(start);
 
         //For each node in reverse DFS post-order, "relax" the edge.
         // If the new distance to the neighboring node using the given edge is better than the best-known distTo

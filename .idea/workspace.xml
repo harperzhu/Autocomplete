@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a2546d52-a97f-42a8-97f1-fd6fc25884e9" name="Default Changelist" comment="First attempt with ToposortDAGSolver" />
+    <list default="true" id="a2546d52-a97f-42a8-97f1-fd6fc25884e9" name="Default Changelist" comment="updated version">
+      <change afterPath="$PROJECT_DIR$/out/production/project/minpq/minpq.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Autocomplete.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/minpq/minpq.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/project/graphs/ToposortDAGSolver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project/graphs/ToposortDAGSolver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/project/minpq/OptimizedHeapMinPQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project/minpq/OptimizedHeapMinPQ.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/project/seamcarving/DynamicProgrammingSeamFinder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project/seamcarving/DynamicProgrammingSeamFinder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/project/seamcarving/GenerativeSeamFinder$PixelGraph$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project/seamcarving/GenerativeSeamFinder$PixelGraph$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/project/seamcarving/GenerativeSeamFinder$PixelGraph$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project/seamcarving/GenerativeSeamFinder$PixelGraph$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/project/seamcarving/GenerativeSeamFinder$PixelGraph$Pixel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project/seamcarving/GenerativeSeamFinder$PixelGraph$Pixel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/project/seamcarving/GenerativeSeamFinder$PixelGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project/seamcarving/GenerativeSeamFinder$PixelGraph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/project/seamcarving/GenerativeSeamFinder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project/seamcarving/GenerativeSeamFinder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/project/seamcarving/SeamFinderMultiTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project/seamcarving/SeamFinderMultiTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/ToposortDAGSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/ToposortDAGSolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/seamcarving/DynamicProgrammingSeamFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/seamcarving/DynamicProgrammingSeamFinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/seamcarving/GenerativeSeamFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/seamcarving/GenerativeSeamFinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/seamcarving/SeamFinderMultiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/seamcarving/SeamFinderMultiTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,7 +53,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
-  <component name="RunManager" selected="Application.ModeratorMultiTest">
+  <component name="RunManager" selected="Application.SeamFinderMultiTest">
     <configuration name="ModeratorMultiTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="minpq.moderator.ModeratorMultiTest" />
       <module name="project" />
@@ -45,8 +67,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SeamFinderMultiTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="seamcarving.SeamFinderMultiTest" />
+      <module name="project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="seamcarving.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SeamFinderMultiTest" />
         <item itemvalue="Application.ModeratorMultiTest" />
       </list>
     </recent_temporary>
@@ -70,6 +117,8 @@
       <workItem from="1628540891602" duration="12539000" />
       <workItem from="1628642018360" duration="12401000" />
       <workItem from="1628822067618" duration="62000" />
+      <workItem from="1628822135238" duration="36000" />
+      <workItem from="1628957629171" duration="3729000" />
     </task>
     <task id="LOCAL-00001" summary="First attempt with UnsortedArrayMinPQ">
       <created>1627286911210</created>
@@ -190,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628654390767</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="updated version">
+      <created>1628822147494</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1628822147494</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,7 +278,8 @@
     <MESSAGE value="First attempt with GenerativeSeamFinder" />
     <MESSAGE value="First Debugging attempt with GenerativeSeamFinder" />
     <MESSAGE value="First attempt with ToposortDAGSolver" />
-    <option name="LAST_COMMIT_MESSAGE" value="First attempt with ToposortDAGSolver" />
+    <MESSAGE value="updated version" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated version" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

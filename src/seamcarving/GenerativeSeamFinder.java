@@ -89,10 +89,10 @@ public class GenerativeSeamFinder implements SeamFinder {
                     //create edges between that me with neighbor
                     int xCoordinate = list.get(i).x;
                     int yCoordinate = list.get(i).y;
-                    edgeList.add(new Edge<>(source, list.get(i),f.apply(picture,xCoordinate,yCoordinate)));
+                    edgeList.add(new Edge<>(this, list.get(i),f.apply(picture,xCoordinate,yCoordinate)));
                 }
 
-                //order it with shortest path
+                //TODO: order it with shortest path
                 //NOT IMPLEMENTED YET
 //                for(int i=0; i<edgeList.size();i++){
 //                    Collections.sort(edgeList.get(i).weight);
@@ -149,20 +149,23 @@ public class GenerativeSeamFinder implements SeamFinder {
 
             @Override
             public List<Edge<Node>> neighbors(Picture picture, EnergyFunction f) {
-                //create pixel for each right top, middle, bottom
-                Pixel rightTopPixel = new Pixel(x,y-1);
-                Pixel rightMiddlePixel = new Pixel(x,y);
-                Pixel rightBottomPixel = new Pixel(x,y+1);
 
-                //create edge from source to the right top.... bottom
-                Edge edgeToRightTopPixel = new Edge(this,rightTopPixel, f.apply(picture,x,y-1));
-                Edge edgeToRightMiddlePixel = new Edge(this,rightMiddlePixel, f.apply(picture,x,y));
-                Edge edgeToRightBottomPixel = new Edge(this,rightBottomPixel, f.apply(picture,x,y+1));
+                List newYArray = new ArrayList(3);
+                if(x < picture.width()-1) {
+                for(int i=y-1;i<y+2;i++) {
+                    if(i>= 0 && i<picture.height()) {
+                        for(int j=0;j<3;j++) {
+                            //create pixel for each right top, middle, bottom
+                            newYArray.add(new Pixel(x, i));
+                            //add in new edge
+                            neighbors.add(new Edge(this, newYArray.get(j), f.apply(picture,x, i)));
+                        }
 
-                //add all of these edge to neighbors
-                neighbors.add(edgeToRightBottomPixel);
-                neighbors.add(edgeToRightTopPixel);
-                neighbors.add(edgeToRightMiddlePixel);
+                    }
+                    }
+                }else if(x == picture.width() -1){
+                    neighbors.add(new Edge<>(this,sink,0));
+                }
 
                 return neighbors;
             }

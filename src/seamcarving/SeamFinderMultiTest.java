@@ -28,7 +28,7 @@ class SeamFinderMultiTest {
     /**
      * The base directory path for the images.
      */
-    private static final String BASE_PATH = "data/seamcarving/";
+    private static final String BASE_PATH = "/Users/harperzhu/Desktop/CSE373/Autocomplete/src/seamcarving";
     /**
      * The image files (.png) and corresponding expected seam costs (.txt) in the {@link #BASE_PATH}.
      */
@@ -54,20 +54,20 @@ class SeamFinderMultiTest {
     };
 
     public static void main(String[] args) throws IOException {
-        System.out.println("Testing Djikstra Solver");
-        test(new AdjacencyListSeamFinder(DijkstraSolver::new));
-        System.out.println("\n=============================================");
+//        System.out.println("Testing Djikstra Solver");
+//        test(new AdjacencyListSeamFinder(DijkstraSolver::new));
+//        System.out.println("\n=============================================");
 
         System.out.println("Testing Generative Seam Finder");
         test(new GenerativeSeamFinder(DijkstraSolver::new));
         System.out.println("\n=============================================");
 
-        System.out.println("Testing Toposort DAG Solver");
-        test(new AdjacencyListSeamFinder(ToposortDAGSolver::new));
-        System.out.println("\n=============================================");
+//        System.out.println("Testing Toposort DAG Solver");
+//        test(new AdjacencyListSeamFinder(ToposortDAGSolver::new));
+//        System.out.println("\n=============================================");
 
-        System.out.println("Testing Dynamic Programming Seam Finder");
-        test(new DynamicProgrammingSeamFinder());
+//        System.out.println("Testing Dynamic Programming Seam Finder");
+//        test(new DynamicProgrammingSeamFinder());
     }
 
     /**
