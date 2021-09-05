@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a2546d52-a97f-42a8-97f1-fd6fc25884e9" name="Default Changelist" comment="updated version">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project/seamcarving/GenerativeSeamFinder$PixelGraph$Pixel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project/seamcarving/GenerativeSeamFinder$PixelGraph$Pixel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project/seamcarving/SeamFinderMultiTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project/seamcarving/SeamFinderMultiTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/seamcarving/GenerativeSeamFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/seamcarving/GenerativeSeamFinder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/seamcarving/SeamFinderMultiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/seamcarving/SeamFinderMultiTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,17 +61,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.SeamFinderMultiTest" />
@@ -102,7 +88,11 @@
       <workItem from="1628642018360" duration="12401000" />
       <workItem from="1628822067618" duration="62000" />
       <workItem from="1628822135238" duration="36000" />
-      <workItem from="1628957629171" duration="6008000" />
+      <workItem from="1628957629171" duration="6558000" />
+      <workItem from="1629092219366" duration="4788000" />
+      <workItem from="1629132065740" duration="58000" />
+      <workItem from="1629270089144" duration="755000" />
+      <workItem from="1629309571451" duration="10000" />
     </task>
     <task id="LOCAL-00001" summary="First attempt with UnsortedArrayMinPQ">
       <created>1627286911210</created>

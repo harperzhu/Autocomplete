@@ -54,20 +54,20 @@ class SeamFinderMultiTest {
     };
 
     public static void main(String[] args) throws IOException {
-//        System.out.println("Testing Djikstra Solver");
-//        test(new AdjacencyListSeamFinder(DijkstraSolver::new));
-//        System.out.println("\n=============================================");
+        System.out.println("Testing Djikstra Solver");
+        test(new AdjacencyListSeamFinder(DijkstraSolver::new));
+        System.out.println("\n=============================================");
 
         System.out.println("Testing Generative Seam Finder");
         test(new GenerativeSeamFinder(DijkstraSolver::new));
         System.out.println("\n=============================================");
 
-//        System.out.println("Testing Toposort DAG Solver");
-//        test(new AdjacencyListSeamFinder(ToposortDAGSolver::new));
-//        System.out.println("\n=============================================");
+        System.out.println("Testing Toposort DAG Solver");
+        test(new AdjacencyListSeamFinder(ToposortDAGSolver::new));
+        System.out.println("\n=============================================");
 
-//        System.out.println("Testing Dynamic Programming Seam Finder");
-//        test(new DynamicProgrammingSeamFinder());
+        System.out.println("Testing Dynamic Programming Seam Finder");
+        test(new DynamicProgrammingSeamFinder());
     }
 
     /**
